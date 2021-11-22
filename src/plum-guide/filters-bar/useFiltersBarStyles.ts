@@ -6,5 +6,13 @@ export const useFiltersBarStyles = makeStyles(() => {
         filtersBarContainer: {
             ...centeredContent,
         },
+        section: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            padding: '10px',
+            width: '200px',
+            borderRight: '1px solid black'
+        }
     }
 });
