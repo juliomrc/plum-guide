@@ -1,6 +1,8 @@
+import { PlumGuide } from './plum-guide/PlumGuide';
+
 function App() {
     return (
-        <span>Hello Plum Guide!</span>
+        <PlumGuide />
     );
 }
 
