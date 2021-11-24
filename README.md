@@ -1,6 +1,7 @@
 # To start the app:
 
-npm i && npm run start
+npm i
+npm run start
 
 # Points to notice
 
