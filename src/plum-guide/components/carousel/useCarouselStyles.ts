@@ -5,6 +5,7 @@ export const useCarouselStyles = makeStyles(() => {
     return {
         carousel: {
             position: 'relative',
+            overflow: 'hidden',
         },
         itemsContainer: {
             padding: '0 40px',

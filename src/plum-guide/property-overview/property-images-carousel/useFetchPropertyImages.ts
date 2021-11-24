@@ -14,8 +14,7 @@ export const useFetchPropertyImages = () => {
                 const { imageUrls } = await fetchImagesData();
                 setPropertyImages(imageUrls);
             } catch {
-                // TODO
-                setPropertyImages(['Ups bro', '2', '3']);
+                // Error handling
             }
         };
 
