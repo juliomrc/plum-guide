@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { usePropertyHighlightsStyles } from './usePropertyHighlightsStyles';
+import { useLocationHighlightsStyles } from './useLocationHighlightsStyles';
 
 interface LocationSectionItemProps {
     className?: string;
@@ -8,7 +8,7 @@ interface LocationSectionItemProps {
 export const LocationSectionItem: React.FC<LocationSectionItemProps> = ({
     children, className,
 }) => {
-    const cssClasses = usePropertyHighlightsStyles();
+    const cssClasses = useLocationHighlightsStyles();
 
     return (
         <div className={clsx(cssClasses.locationSectionItem, className)}>

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
+import { PlumGuide } from './plum-guide/PlumGuide';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <PlumGuide />
     </React.StrictMode>,
     document.getElementById('root')
 );

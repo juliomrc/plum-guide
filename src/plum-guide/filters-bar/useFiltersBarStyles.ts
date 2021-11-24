@@ -7,20 +7,20 @@ export const useFiltersBarStyles = makeStyles((theme) => {
     return {
         filtersBarContainer: {
             ...centeredContent,
-            margin: '20px 0',
-
             [theme.breakpoints.down('md')]: {
                 flexDirection: 'column',
-            }
+            },
+            margin: '20px',
         },
         section: {
             display: 'flex',
             justifyContent: 'space-between',
             padding: '5px 10px',
+
             width: '250px',
             height: '45px',
-            borderRight: '0.1px solid gray',
 
+            borderRight: '0.1px solid gray',
             [theme.breakpoints.down('md')]: {
                 borderRight: 'none',
             },
@@ -36,6 +36,7 @@ export const useFiltersBarStyles = makeStyles((theme) => {
         },
         bookingButton: {
             margin: '10px',
+            borderRadius: '0',
             backgroundColor: pallette.orange,
         },
     }

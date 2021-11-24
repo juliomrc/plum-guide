@@ -1,36 +1,27 @@
-import { useEffect, useRef, useState } from 'react';
 import { Carousel } from '../../components/carousel';
+import { buildImgSrcUrl } from './buildImgSrcUrl';
 import { useFetchPropertyImages } from './useFetchPropertyImages';
+import { useGetRefBoundingClientRect } from './useGetRefBoundingClientRect';
 import { usePropertyImagesCarouselStyles } from './usePropertyImagesCarouselStyles';
-
-interface ImageDimensions {
-    height: number;
-    width: number;
-}
 
 export const PropertyImagesCarousel: React.FC = () => {
     const propertyImages = useFetchPropertyImages();
-    const containerRef = useRef<HTMLImageElement>(null);
-    const [imageDimensions, setImageDimensions] = useState<ImageDimensions>();
-
-    useEffect(() => {
-        if (containerRef.current) {
-            const { height, width } = containerRef.current.getBoundingClientRect();
-            setImageDimensions({ width, height });
-        }
-    }, []);
-
+    const { elementRef, height, width } = useGetRefBoundingClientRect();
 
     const cssClasses = usePropertyImagesCarouselStyles();
 
     return (
         <div className={cssClasses.propertyImagesCarouselContainer}>
-            <div className={cssClasses.imagesCarouselSize} ref={containerRef}>
+            <div className={cssClasses.imagesCarouselSize} ref={elementRef}>
                 <Carousel>
-                    {propertyImages.map((imageSrc) => {
-                        const imageUrl = `${imageSrc}?fit=clip&h=${imageDimensions?.height}`
+                    {propertyImages.map((imgSrc) => {
                         return (
-                            <img key={imageSrc} src={imageUrl} className={cssClasses.image} alt='Property' />
+                            <img
+                                key={imgSrc}
+                                src={buildImgSrcUrl(imgSrc, height, width)}
+                                className={cssClasses.image}
+                                alt='Property'
+                            />
                         )
                     })}
                 </Carousel>

@@ -9,10 +9,5 @@ export const usePropertyOverviewStyles = makeStyles(() => {
             backgroundColor: pallette.lightMagenta,
             marginBottom: '40px',
         },
-        propertyName: {
-            fontSize: '40px',
-            marginTop: '40px',
-            marginBottom: '10px',
-        }
-    }
+    };
 });
