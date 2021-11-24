@@ -1,14 +1,15 @@
-import { ButtonBase, Link } from '@material-ui/core';
-import { makeNavBarStyles } from './makeNavBarStyles';
-import { Menu } from '@material-ui/icons';
-import { Search } from '@material-ui/icons';
+import { ButtonBase } from '@material-ui/core';
+import { useNavBarStyles } from './useNavBarStyles';
+import { Menu, Search } from '@material-ui/icons';
+import { Link } from '../components/link';
+import { MenuSection } from './MenuSection';
 
 export function NavBar() {
-    const cssClasses = makeNavBarStyles();
+    const cssClasses = useNavBarStyles();
 
     return (
         <div className={cssClasses.navBarContainer}>
-            <div className={cssClasses.menuSection}>
+            <MenuSection>
                 <ButtonBase className={cssClasses.burgerIcon}>
                     <Menu />
                 </ButtonBase>
@@ -18,11 +19,13 @@ export function NavBar() {
                 <Link href='/' className={cssClasses.menuItem}>
                     Hosts
                 </Link>
-            </div>
-            <Link href='/' className={cssClasses.menuSection}>
-                Plum Guide
-            </Link>
-            <div className={cssClasses.menuSection}>
+            </MenuSection>
+            <MenuSection>
+                <h1 className={cssClasses.pageHeader}>
+                    Plum Guide
+                </h1>
+            </MenuSection>
+            <MenuSection>
                 <Link href='/' className={cssClasses.menuItem}>
                     Need help?
                 </Link>
@@ -32,7 +35,7 @@ export function NavBar() {
                 <ButtonBase>
                     <Search />
                 </ButtonBase>
-            </div>
+            </MenuSection>
         </div>
     );
 }

@@ -2,13 +2,14 @@ import { makeStyles } from '@material-ui/core';
 import { centeredContent } from '../common-styles/commonStyles';
 import { pallette } from '../common-styles/pallette';
 
-export const makeNavBarStyles = makeStyles(() => {
+export const useNavBarStyles = makeStyles(() => {
     return {
         navBarContainer: {
             display: 'flex',
+            minHeight: '45px',
             justifyContent: 'space-between',
             backgroundColor: pallette.background,
-            borderBottom: '1px solid black',
+            borderBottom: '1px solid gray',
             marginBottom: '15px',
         },
         menuSection: centeredContent,
@@ -17,7 +18,11 @@ export const makeNavBarStyles = makeStyles(() => {
         },
         burgerIcon: {
             padding: '5px',
-            borderRight: '0.1px solid black',
+            height: '100%',
+            borderRight: '1px solid gray',
+        },
+        pageHeader: {
+            fontSize: '20px',
         }
     }
 });
