@@ -7,6 +7,7 @@ export const usePropertyOverviewStyles = makeStyles(() => {
         propertyOverviewContainer: {
             ...centeredVerticalContent,
             backgroundColor: pallette.lightMagenta,
+            marginBottom: '40px',
         },
         propertyName: {
             fontSize: '40px',

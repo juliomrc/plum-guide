@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { IconButton } from '@material-ui/core';
 import { ArrowBack, ArrowForward } from '@material-ui/icons';
-import React, { useState } from 'react';
 import { useCarouselStyles } from './useCarouselStyles';
 
 interface CarouselProps {

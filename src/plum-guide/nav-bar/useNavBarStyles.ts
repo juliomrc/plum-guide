@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import { centeredContent } from '../common-styles/commonStyles';
 import { pallette } from '../common-styles/pallette';
 
-export const useNavBarStyles = makeStyles(() => {
+export const useNavBarStyles = makeStyles((theme) => {
     return {
         navBarContainer: {
             display: 'flex',
@@ -11,6 +11,10 @@ export const useNavBarStyles = makeStyles(() => {
             backgroundColor: pallette.white,
             borderBottom: '1px solid gray',
             marginBottom: '15px',
+
+            [theme.breakpoints.down('md')]: {
+                padding: '5px',
+            }
         },
         menuSection: centeredContent,
         menuItem: {

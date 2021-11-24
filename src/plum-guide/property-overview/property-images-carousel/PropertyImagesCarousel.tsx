@@ -24,15 +24,17 @@ export const PropertyImagesCarousel: React.FC = () => {
     const cssClasses = usePropertyImagesCarouselStyles();
 
     return (
-        <div ref={containerRef} className={cssClasses.propertyImagesCarouselContainer}>
-            <Carousel>
-                {propertyImages.map((imageSrc) => {
-                    const imageUrl = `${imageSrc}?fit=crop&h=${imageDimensions?.height}`
-                    return (
-                        <img className={cssClasses.image} src={imageUrl} alt='Property' />
-                    )
-                })}
-            </Carousel>
+        <div className={cssClasses.propertyImagesCarouselContainer}>
+            <div className={cssClasses.imagesCarouselSize} ref={containerRef}>
+                <Carousel>
+                    {propertyImages.map((imageSrc) => {
+                        const imageUrl = `${imageSrc}?fit=clip&h=${imageDimensions?.height}`
+                        return (
+                            <img key={imageSrc} src={imageUrl} className={cssClasses.image} alt='Property' />
+                        )
+                    })}
+                </Carousel>
+            </div>
         </div>
     );
 }
