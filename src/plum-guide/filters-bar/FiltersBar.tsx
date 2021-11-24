@@ -1,4 +1,5 @@
-import { Button, ButtonBase } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import { FilterSection } from './FilterSection';
 import { useFiltersBarStyles } from './useFiltersBarStyles';
 
 export function FiltersBar() {
@@ -6,23 +7,19 @@ export function FiltersBar() {
 
     return (
         <div className={cssClasses.filtersBarContainer}>
-            <ButtonBase className={cssClasses.section}>
-                <div>From / to</div>
+            <FilterSection label="From / to" isFilterExpandable>
                 <div>3 Jan 2020 - 28 Feb 2020</div>
-            </ButtonBase>
-            <ButtonBase className={cssClasses.section}>
-                <div>For</div>
+            </FilterSection>
+            <FilterSection label="For" isFilterExpandable>
                 <div>2 Guests</div>
-            </ButtonBase>
-            <div className={cssClasses.section}>
-                <div>Price per night</div>
+            </FilterSection>
+            <FilterSection label="Price per night">
                 <div>345</div>
-            </div>
-            <div className={cssClasses.section}>
-                <div>Total for 54 nights</div>
+            </FilterSection>
+            <FilterSection label="Total for 54 nights">
                 <div>18,630</div>
-            </div>
-            <Button variant="contained">
+            </FilterSection>
+            <Button className={cssClasses.bookingButton} variant="contained">
                 Instant booking
             </Button>
         </div>
