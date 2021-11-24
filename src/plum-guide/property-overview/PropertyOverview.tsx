@@ -1,13 +1,13 @@
-import { makePropertyOverviewStyles } from './makePropertyOverviewStyles';
+import { usePropertyOverviewStyles } from './usePropertyOverviewStyles';
 import { PropertyImagesCarousel } from './property-images-carousel';
-import { PropertyHighlights } from './PropertyHighlights';
+import { PropertyHighlights } from './property-highlights';
 
 export function PropertyOverview() {
-    const cssClasses = makePropertyOverviewStyles();
+    const cssClasses = usePropertyOverviewStyles();
 
     return (
         <div className={cssClasses.propertyOverviewContainer}>
-            <div>Monsieur Didot</div>
+            <h2 className={cssClasses.propertyName}>Monsieur Didot</h2>
             <PropertyHighlights />
             <div><PropertyImagesCarousel /></div>
         </div>

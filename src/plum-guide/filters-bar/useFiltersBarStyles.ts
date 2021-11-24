@@ -7,7 +7,7 @@ export const useFiltersBarStyles = makeStyles(() => {
     return {
         filtersBarContainer: {
             ...centeredContent,
-            marginBottom: '20px',
+            margin: '20px 0',
         },
         section: {
             display: 'flex',
