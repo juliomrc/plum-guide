@@ -7,7 +7,7 @@ export const PropertyImagesCarousel: React.FC = () => {
     const cssClasses = usePropertyImagesCarouselStyles();
 
     return (
-        <div className={cssClasses.propertyImagesCarousel}>
+        <div className={cssClasses.propertyImagesCarouselContainer}>
             <Carousel>
                 {propertyImages.map((imageSrc) => (
                     <img className={cssClasses.image} src={imageSrc} alt='Property' />

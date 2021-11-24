@@ -6,6 +6,9 @@ export const useCarouselStyles = makeStyles(() => {
         carousel: {
             position: 'relative',
         },
+        itemsContainer: {
+            padding: '0 40px',
+        },
         rightSlideButton: {
             position: 'absolute',
             right: '5px',

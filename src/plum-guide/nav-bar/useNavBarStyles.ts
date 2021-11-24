@@ -8,7 +8,7 @@ export const useNavBarStyles = makeStyles(() => {
             display: 'flex',
             minHeight: '45px',
             justifyContent: 'space-between',
-            backgroundColor: pallette.background,
+            backgroundColor: pallette.white,
             borderBottom: '1px solid gray',
             marginBottom: '15px',
         },

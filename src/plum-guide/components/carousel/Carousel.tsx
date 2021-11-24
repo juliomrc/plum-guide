@@ -1,3 +1,5 @@
+import { IconButton } from '@material-ui/core';
+import { ArrowBack, ArrowForward } from '@material-ui/icons';
 import React, { useState } from 'react';
 import { useCarouselStyles } from './useCarouselStyles';
 
@@ -37,9 +39,15 @@ export const Carousel: React.FC<CarouselProps> = ({ children }) => {
 
     return (
         <div className={cssClasses.carousel}>
-            <button className={cssClasses.leftSlideButton} onClick={handleSlideLeft}>Left</button>
-            {children[activeIndex]}
-            <button className={cssClasses.rightSlideButton} onClick={handleSlideRight}>Right</button>
+            <IconButton className={cssClasses.leftSlideButton} onClick={handleSlideLeft}>
+                <ArrowBack />
+            </IconButton>
+            <div className={cssClasses.itemsContainer}>
+                {children[activeIndex]}
+            </div>
+            <IconButton className={cssClasses.rightSlideButton} onClick={handleSlideRight}>
+                <ArrowForward />
+            </IconButton>
         </div>
     );
 };

@@ -9,7 +9,7 @@ export function PropertyOverview() {
         <div className={cssClasses.propertyOverviewContainer}>
             <h2 className={cssClasses.propertyName}>Monsieur Didot</h2>
             <PropertyHighlights />
-            <div><PropertyImagesCarousel /></div>
+            <PropertyImagesCarousel />
         </div>
     );
 }
