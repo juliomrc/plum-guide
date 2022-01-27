@@ -1,3 +1,7 @@
+# Archived repository
+
+This repository is being archived. It was used as an exercise and no longer relevant.
+
 # To start the app:
 
 npm i
